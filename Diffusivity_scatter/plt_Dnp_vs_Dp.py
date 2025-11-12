@@ -101,10 +101,10 @@ ax1.errorbar(h16[:,3]*1000,h16[:,1]*1000,xerr=h16[:,4]*1000,yerr=h16[:,2]*1000,c
 #---- Nanoparticle ----#
 ax1.set_xlim([-0.1,3.1])
 ax1.set_ylim([-0.5,10.5])
-#ax1.set_xticks([0,10,20,30,40,50,60,70])
+ax1.set_xticks([0,0.5,1.0,1.5,2.0,2.5,3.0])
+ax1.set_yticks([0,2,4,6,8,10])
 ax1.set_ylabel(r'$D_{\rm NP} \times 10^{3}$',labelpad=1)
 
-#ax2.set_xticks([0,10,20,30,40,50,60,70])
 ax1.set_xlabel(r'$D_{\rm P} \times 10^{3}$',labelpad=1)
 
 
