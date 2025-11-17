@@ -14,7 +14,7 @@ from matplotlib.legend_handler import HandlerLine2D
 
 #---- define parameters for plotting like figure size, linesize, and markersize ----#
 fig_width = 3.25 # width in inches
-fig_height = fig_width/1.5 # height in inches
+fig_height = fig_width/1.33 # height in inches
 fig_size =  [fig_width,fig_height]
 
 params = {'backend': 'Agg',
