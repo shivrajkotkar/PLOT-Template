@@ -75,9 +75,9 @@ c7 = scalarMap.to_rgba(values[7])
 c8 = scalarMap.to_rgba(values[8])
 
 # I usually define the number of datasets (e.g., +1 or +2 for the number of curves) and avoid using the last color in the colormap, as it’s often too light
-# In this case, I have h10 to h17 (8 datasets), so I did not use c8  
+# In this case, I have h10,h12 to h16 (6 datasets), so I did not use c1,and c7, and c8  
 # lighter colors near the end of the colormap don’t print well in papers or presentations.
-
+# You can skip one c values if colors are too close
 
 #---- Define figure ----#
 fig=plt.figure()
@@ -98,7 +98,6 @@ ax1.errorbar(h16[:,3]*1000,h16[:,1]*1000,xerr=h16[:,4]*1000,yerr=h16[:,2]*1000,c
 
 #---- Set axis properties ----#
 
-#---- Nanoparticle ----#
 ax1.set_xlim([-0.1,3.1])
 ax1.set_ylim([-0.5,10.5])
 ax1.set_xticks([0,0.5,1.0,1.5,2.0,2.5,3.0])
@@ -110,8 +109,7 @@ ax1.set_xlabel(r'$D_{\rm P} \times 10^{3}$',labelpad=1)
 
 
 #---- Plot legend ----#
-# Plot legend — only one set of legends is shown here (for ax1). 
-# You can also display a legend for ax2, but it’s omitted here due to lack of space in plotting area.
+# Ensure legends are not overlapping with lines, you might want to adjust "loc" and "ncol"
 
 legend=ax1.legend(loc="lower right",handlelength=1,numpoints=1,ncol=2,columnspacing=0.5,handletextpad=0.3,labelspacing=0.3) 
 legend.get_frame().set_linewidth(-1.0)
