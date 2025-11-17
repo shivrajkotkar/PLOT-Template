@@ -92,7 +92,7 @@ ax1.errorbar(h14[:,0],h14[:,1],color=c4,lw=lscale*lwidth,linestyle='-.',label=r'
 
 #---- Set axis properties ----#
 
-ax1.set_xlim([-1,61])
+ax1.set_xlim([-2,62])
 ax1.set_ylim([0.00005,5])
 ax1.set_xticks([0,10,20,30,40,50,60])
 ax1.set_yticks([0.0001,0.001,0.01,0.1,1])
